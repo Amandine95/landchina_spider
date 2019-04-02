@@ -61,7 +61,7 @@ def parse_page(url, pn, data):
         html_div2 = etree.HTML(resp.text)
         data_list = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr')[1:]
         for data in data_list:
-            ul = data.xpath('/td[2]/a/@href')
+            ul = data.xpath('/td[3]/a/@href')
             urls.append(ul)
         yield urls
 
