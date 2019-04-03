@@ -1,0 +1,28 @@
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 18126
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 18126
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17812
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17812
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17812
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17812
+第1页
+第1页
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=06bf8941-735d-4a11-b659-8066d7a015f3 HTTP/1.1" 200 12951
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=06bf8941-735d-4a11-b659-8066d7a015f3 HTTP/1.1" 200 12951
+供地结果信息,行政区:,顺德区,电子监管号：,4406062019BI7595,项目名称:,容桂-雷保全-住宅,项目位置:,佛山市顺德区容桂东风居委会新前三巷10号,面积(公顷):,0.003325,土地来源:,0.003325,土地用途:,城镇住宅用地,供地方式:,协议出让,土地使用年限:,70,行业分类:,房地产业,土地级别:,一级,成交价格(万元):,0.8987,分期支付约定:,支付期号,约定支付日期,约定支付金额(万元),备注,1,2019年04月27日,0.8987,1,2019年04月27日,0.8987,土地使用权人:,雷保全, ,约定容积率:,下限:,上限:,约定交地时间:,约定开工时间:,约定竣工时间:,实际开工时间:,实际竣工时间:, ,批准单位:,佛山市顺德区,合同签订日期:,2019年03月28日
+供地结果信息,行政区:,顺德区,电子监管号：,4406062019BI7595,项目名称:,容桂-雷保全-住宅,项目位置:,佛山市顺德区容桂东风居委会新前三巷10号,面积(公顷):,0.003325,土地来源:,0.003325,土地用途:,城镇住宅用地,供地方式:,协议出让,土地使用年限:,70,行业分类:,房地产业,土地级别:,一级,成交价格(万元):,0.8987,分期支付约定:,支付期号,约定支付日期,约定支付金额(万元),备注,1,2019年04月27日,0.8987,1,2019年04月27日,0.8987,土地使用权人:,雷保全, ,约定容积率:,下限:,上限:,约定交地时间:,约定开工时间:,约定竣工时间:,实际开工时间:,实际竣工时间:, ,批准单位:,佛山市顺德区,合同签订日期:,2019年03月28日
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=18cb56ea-ac66-4ce5-a743-63ac1df40686 HTTP/1.1" 200 12949
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=18cb56ea-ac66-4ce5-a743-63ac1df40686 HTTP/1.1" 200 12949
+供地结果信息,行政区:,顺德区,电子监管号：,4406062019BI7582,项目名称:,容桂-吴月好-住宅,项目位置:,佛山市顺德区容桂红星社区全胜新路五街10号,面积(公顷):,0.019602,土地来源:,0.019602,土地用途:,城镇住宅用地,供地方式:,协议出让,土地使用年限:,70,行业分类:,房地产业,土地级别:,一级,成交价格(万元):,9.4632,分期支付约定:,支付期号,约定支付日期,约定支付金额(万元),备注,1,2019年04月27日,9.4632,1,2019年04月27日,9.4632,土地使用权人:,吴月好, ,约定容积率:,下限:,上限:,约定交地时间:,约定开工时间:,约定竣工时间:,实际开工时间:,实际竣工时间:, ,批准单位:,佛山市顺德区,合同签订日期:,2019年03月28日
+供地结果信息,行政区:,顺德区,电子监管号：,4406062019BI7582,项目名称:,容桂-吴月好-住宅,项目位置:,佛山市顺德区容桂红星社区全胜新路五街10号,面积(公顷):,0.019602,土地来源:,0.019602,土地用途:,城镇住宅用地,供地方式:,协议出让,土地使用年限:,70,行业分类:,房地产业,土地级别:,一级,成交价格(万元):,9.4632,分期支付约定:,支付期号,约定支付日期,约定支付金额(万元),备注,1,2019年04月27日,9.4632,1,2019年04月27日,9.4632,土地使用权人:,吴月好, ,约定容积率:,下限:,上限:,约定交地时间:,约定开工时间:,约定竣工时间:,实际开工时间:,实际竣工时间:, ,批准单位:,佛山市顺德区,合同签订日期:,2019年03月28日
+Starting new HTTP connection (1): www.landchina.com:80
+Starting new HTTP connection (1): www.landchina.com:80
