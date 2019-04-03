@@ -7,13 +7,13 @@ import config
 from lxml import etree
 import datetime
 import re
-from land_log import set_log
+# from land_log import set_log
 from parse_step2 import parse_detail
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-logger = set_log()
+# logger = set_log()
 
 
 def set_day(sd, ed):
@@ -68,7 +68,8 @@ def parse_page(url, pn, data):
         for i in range(2, end):
             ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
             urls.append(ul)
-        logger.debug(u'第%d页' % page)
+        # logger.debug(u'第%d页' % page)
+        print u'第%d页' % page
         yield urls
 
 
