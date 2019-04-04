@@ -4,6 +4,7 @@ import sys
 import requests
 import config
 from lxml import etree
+from utlis import get_date_obj
 
 # from land_log import set_log
 
@@ -31,9 +32,16 @@ def parse_detail(url_prefix, urls):
         dic['land_usage'] = table.xpath('./tr[7]/td[2]/span/text()')[0]
         dic['transaction_type_raw'] = table.xpath('./tr[7]/td[4]/span/text()')[0]
         dic['usage_period_raw'] = table.xpath('./tr[8]/td[2]/span/text()')[0]
+        dic['level'] = table.xpath('./tr[9]/td[2]/span/text()')[0]
+        price = table.xpath('./tr[9]/td[4]/span/text()')[0]
+        dic['deal_price'] = round(float(price) * 10000, 2)
         area = table.xpath('./tr[6]/td[2]/span/text()')[0]
-        print type(area)
         dic['area'] = round(float(area) * 10000, 2)
+        dic['approve_authority'] = table.xpath('./tr[16]/td[2]/span/text()')[0]
+        date = table.xpath('./tr[16]/td[4]/span/text()')[0]
+        dic['transaction_date'] = get_date_obj(date)
+        dic['usage_type'] = table.xpath('./tr[8]/td[4]/span/text()')[0]
+        dic['']
         print dic
 
 
