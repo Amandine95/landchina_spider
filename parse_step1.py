@@ -29,7 +29,7 @@ def set_day(sd, ed):
 def get_data(url, date):
     """获取form_data参数"""
     resp = requests.get(url, headers=config.headers, cookies=config.cookies1)
-    # print 'p1-', resp.text
+    print 'p1-', resp.text
     html_div = etree.HTML(resp.content)
     # pg_str = html_div.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
     tab = '9f2c3acd-0256-4da2-a659-6949c4671a2a:' + date + '~' + date
@@ -44,7 +44,7 @@ def get_data(url, date):
 def parse_day(url, data):
     """按天获取页数"""
     resp = requests.post(url, data=data, headers=config.headers, cookies=config.cookies2)
-    # print 'p2-', resp.text
+    print 'p2-', resp.text
     html_div1 = etree.HTML(resp.text)
     pg_str = html_div1.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
     print 'str-', pg_str
