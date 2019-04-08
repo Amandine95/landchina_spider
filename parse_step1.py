@@ -9,6 +9,7 @@ import re
 # from land_log import set_log
 from parse_step2 import parse_detail
 from cookies import get_cookies
+from land_utils.land_utils.esclient import store_to_es
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -81,8 +82,12 @@ if __name__ == '__main__':
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)
-    for day in set_day(sd, ed):
-        para = get_data(link, day)
-        pg = parse_day(link, para)
-        for u in parse_page(link, pg, para):  # u 每一页的链接列表
-            parse_detail(pre_url, u, bk, tk)
+    with open(u'deal_record.csv', 'a+') as f:
+        for day in set_day(sd, ed):
+            para = get_data(link, day)
+            pg = parse_day(link, para)
+            for u in parse_page(link, pg, para):  # u 每一页的链接列表
+                dic, content = parse_detail(pre_url, u, bk, tk)
+                line = '日期%s,内容%s' % (day, content)
+                f.write(line)
+                store_to_es(dic)

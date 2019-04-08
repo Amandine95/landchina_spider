@@ -29,6 +29,8 @@ def parse_detail(url_prefix, urls, bk, tk):
         # print resp.text
         html_div = etree.HTML(resp.text)
         table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]  # 数据所在table
+        content = etree.tostring(table, method='html')
+        # print content
         # 行政区
         dic['dis'] = table.xpath('./tr[3]/td[2]/span/text()')[0]
         # 电子监管号
@@ -104,8 +106,8 @@ def parse_detail(url_prefix, urls, bk, tk):
         dic['id'] = url[121:]
         # 处理时间
         dic['deal_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        string = json.dumps(dic)
-        print string
+        # string = json.dumps(dic)
+        return dic, content
 
 
 if __name__ == '__main__':
