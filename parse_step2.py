@@ -4,10 +4,11 @@ import sys
 import requests
 import config
 from lxml import etree
-from utlis import get_date_obj
+from utlis import get_date_obj, get_txt
 from cookies import get_cookies
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
+import json
 
 # from land_log import set_log
 
@@ -27,7 +28,7 @@ def parse_detail(url_prefix, urls, bk, tk):
         resp = requests.get(url, headers=config.headers, cookies=get_cookies())
         # print resp.text
         html_div = etree.HTML(resp.text)
-        table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]
+        table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]  # 数据所在table
         # 行政区
         dic['dis'] = table.xpath('./tr[3]/td[2]/span/text()')[0]
         # 电子监管号
@@ -47,9 +48,20 @@ def parse_detail(url_prefix, urls, bk, tk):
         # 项目名称
         dic['land_name'] = table.xpath('./tr[4]/td[2]/span/text()')[0]
         # 土地来源
-        dic['land_source'] = table.xpath('./tr[6]/td[4]/span/text()')[0]
+        s1 = table.xpath('./tr[6]/td[2]/span/text()')[0]
+        s2 = table.xpath('./tr[6]/td[4]/span/text()')[0]
+        ls1 = float(s1)
+        ls2 = float(s2)
+        if ls1 and ls2 and ls1 == ls2:
+            dic['land_source'] = u'现有建设用地'
+        elif ls2 and ls2 == 0:
+            dic['land_source'] = u'新增建设用地'
         # 土地用途
-        dic['land_usage'] = table.xpath('./tr[7]/td[2]/span/text()')[0]
+        usage = table.xpath('./tr[7]/td[2]/span/text()')[0]
+        if usage:
+            key = [k for k, v in config.usage_form.items() if usage in v]
+            if key:
+                dic['usage_level'] = key[0]
         # 供地方式
         dic['transaction_type_raw'] = table.xpath('./tr[7]/td[4]/span/text()')[0]
         # 土地使用年限
@@ -72,7 +84,8 @@ def parse_detail(url_prefix, urls, bk, tk):
         # 容积率
         min_limit = table.xpath('tr[13]/td[2]//tr[2]/td[2]/span/text()')
         max_limit = table.xpath('tr[13]/td[2]//tr[2]/td[4]/span/text()')
-        # print min_limit, max_limit
+        dic['plot_ratio_low_raw'] = get_txt(min_limit)
+        dic['plot_ratio_high_raw'] = get_txt(max_limit)
         if min_limit:
             dic['plot_ratio'] = float(min_limit[0])
         elif max_limit:
@@ -85,7 +98,8 @@ def parse_detail(url_prefix, urls, bk, tk):
         dic['id'] = url[121:]
         # 处理时间
         dic['deal_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-        print dic
+        string = json.dumps(dic)
+        print string
 
 
 if __name__ == '__main__':

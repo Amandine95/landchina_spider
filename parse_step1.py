@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 import sys
 import requests
 import config
@@ -78,7 +77,7 @@ def parse_page(url, pn, data):
 if __name__ == '__main__':
     pre_url = 'http://www.landchina.com/'
     link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'
-    bk = 'TkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
+    bk = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)

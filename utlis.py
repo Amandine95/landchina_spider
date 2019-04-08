@@ -29,6 +29,11 @@ def get_date_obj(string):
             return
 
 
+def get_txt(li):
+    """列表转字符串"""
+    return ''.join(li).replace(u'\xa0', u'')
+
+
 if __name__ == '__main__':
     st = u'2017年09月11日'
     print get_date_obj(st)
