@@ -3,11 +3,9 @@
 import sys
 import datetime
 import re
-# import config
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-# sys.path.append('D:/python_execel/execel/')  # 城市id包添加到环境变量
 
 
 def get_date_obj(string):
@@ -29,11 +27,6 @@ def get_date_obj(string):
         except Exception, e:
             print e
             return
-
-
-def get_city():
-    """获取省市"""
-    pass
 
 
 if __name__ == '__main__':

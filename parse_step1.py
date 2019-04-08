@@ -72,16 +72,18 @@ def parse_page(url, pn, data):
             urls.append(ul)
         # logger.debug(u'第%d页' % page)
         print u'第%d页' % page
-        yield urls
+        yield urls  # 返回每一页url列表
 
 
 if __name__ == '__main__':
     pre_url = 'http://www.landchina.com/'
     link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'
+    bk = 'TkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
+    tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)
     for day in set_day(sd, ed):
         para = get_data(link, day)
         pg = parse_day(link, para)
         for u in parse_page(link, pg, para):  # u 每一页的链接列表
-            parse_detail(pre_url, u)
+            parse_detail(pre_url, u, bk, tk)
