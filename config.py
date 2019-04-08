@@ -6,30 +6,11 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 cookies1 = {
-    'yunsuo_session_verify': '8c8177e10833153c7e04b57c064f83d2',
+
     'srcurl': '687474703a2f2f7777772e6c616e646368696e612e636f6d2f64656661756c742e617370783f74616269643d32363326436f6d4e616d653d64656661756c74',
-    'security_session_mid_verify': '0edf5efab9301cb97e27cbc5caccb79e',
     'ASP.NET_SessionId': 'imrh1utgzcj5piuwdtnaomuh',
     'Hm_lvt_83853859c7247c5b03b527894622d3fa': '1554342276',
     'Hm_lpvt_83853859c7247c5b03b527894622d3fa': '1554342276'
-}
-
-cookies2 = {
-    'yunsuo_session_verify': '8c8177e10833153c7e04b57c064f83d2',
-    'srcurl': '687474703a2f2f7777772e6c616e646368696e612e636f6d2f64656661756c742e617370783f74616269643d32363326436f6d4e616d653d64656661756c74',
-    'security_session_mid_verify': '0edf5efab9301cb97e27cbc5caccb79e',
-    'ASP.NET_SessionId': 'imrh1utgzcj5piuwdtnaomuh',
-    'Hm_lvt_83853859c7247c5b03b527894622d3fa': '1554342276',
-    'Hm_lpvt_83853859c7247c5b03b527894622d3fa': '1554342380'
-}
-
-cookies3 = {
-    'yunsuo_session_verify': '8c8177e10833153c7e04b57c064f83d2',
-    'srcurl': '687474703a2f2f7777772e6c616e646368696e612e636f6d2f64656661756c742e617370783f74616269643d32363326436f6d4e616d653d64656661756c74',
-    'security_session_mid_verify': '0edf5efab9301cb97e27cbc5caccb79e',
-    'ASP.NET_SessionId': 'imrh1utgzcj5piuwdtnaomuh',
-    'Hm_lvt_83853859c7247c5b03b527894622d3fa': '1554342276',
-    'Hm_lpvt_83853859c7247c5b03b527894622d3fa': '1554342752'
 }
 
 formdata = {
@@ -61,4 +42,3 @@ province_code = {"11": u"北京市", "12": u"天津市", "13": u"河北省", "14
                  "63": u"青海省", "64": u"宁夏回族", "65": u"新疆维吾尔", "66": u"新疆建设兵团", "71": u"台湾省", "81": u"香港特别行政区",
                  "82": u"澳门特别行政区"}
 # get_city_path = 'D:\\python_execel\\execel'  # 获取城市id包路径
-

@@ -9,9 +9,11 @@ import datetime
 import re
 # from land_log import set_log
 from parse_step2 import parse_detail
+from cookies import get_cookies
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
 
 # logger = set_log()
 
@@ -28,7 +30,7 @@ def set_day(sd, ed):
 
 def get_data(url, date):
     """获取form_data参数"""
-    resp = requests.get(url, headers=config.headers, cookies=config.cookies1)
+    resp = requests.get(url, headers=config.headers, cookies=get_cookies())
     print 'p1-', resp.text
     html_div = etree.HTML(resp.content)
     # pg_str = html_div.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
@@ -43,7 +45,7 @@ def get_data(url, date):
 
 def parse_day(url, data):
     """按天获取页数"""
-    resp = requests.post(url, data=data, headers=config.headers, cookies=config.cookies2)
+    resp = requests.post(url, data=data, headers=config.headers, cookies=get_cookies())
     print 'p2-', resp.text
     html_div1 = etree.HTML(resp.text)
     pg_str = html_div1.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
@@ -61,7 +63,7 @@ def parse_page(url, pn, data):
     for page in range(1, pn + 1):
         urls = []
         data['TAB_QuerySubmitPagerData'] = '%d' % page
-        resp = requests.post(url, data=data, headers=config.headers, cookies=config.cookies2)
+        resp = requests.post(url, data=data, headers=config.headers, cookies=get_cookies())
         html_div2 = etree.HTML(resp.text)
         data_list = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr')
         end = len(data_list) + 1

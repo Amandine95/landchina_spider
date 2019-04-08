@@ -5,6 +5,7 @@ import requests
 import config
 from lxml import etree
 from utlis import get_date_obj
+from cookies import get_cookies
 
 # from land_log import set_log
 
@@ -20,7 +21,7 @@ def parse_detail(url_prefix, urls):
     for url in urls:
         dic = {}
         url = url_prefix + url
-        resp = requests.get(url, headers=config.headers, cookies=config.cookies3)
+        resp = requests.get(url, headers=config.headers, cookies=get_cookies())
         # print resp.text
         html_div = etree.HTML(resp.text)
         table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]
@@ -41,7 +42,6 @@ def parse_detail(url_prefix, urls):
         date = table.xpath('./tr[16]/td[4]/span/text()')[0]
         dic['transaction_date'] = get_date_obj(date)
         dic['usage_type'] = table.xpath('./tr[8]/td[4]/span/text()')[0]
-        dic['']
         print dic
 
 
