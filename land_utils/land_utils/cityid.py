@@ -8,14 +8,20 @@ sys.setdefaultencoding('utf-8')
 es = get_es_client()
 
 
-def get_city_province(pre, index_name="region_metadata_2017_cn"):
+def get_city_province(data, index_name="region_metadata_2017_cn"):
     """
     获取省市
-    :param pre: city_id前缀4位
+    :param data: city_id前缀4位或行政区
     :param index_name: 省市es索引
     :return: city、province
     """
-    sql = '{"query":{"bool":{"must":[{"prefix":{"city_id":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}' % pre
+    if u'本级' in data:
+        sql = '{"query":{"bool":{"must":[{"term":{"city":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}' % data.replace(
+            u'本级', u'')
+    elif data.isdigit():
+        sql = '{"query":{"bool":{"must":[{"prefix":{"city_id":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}' % data
+    else:
+        sql = '{"query":{"bool":{"must":[{"term":{"county":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}' % data
     try:
         res = es.search(index_name, "meta", body=sql)['hits']['hits']
         if len(res):

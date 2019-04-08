@@ -33,9 +33,15 @@ def parse_detail(url_prefix, urls, bk, tk):
         dic['dis'] = table.xpath('./tr[3]/td[2]/span/text()')[0]
         # 电子监管号
         dic['ele_no'] = table.xpath('./tr[3]/td[4]/span/text()')[0]
-        pre = dic['ele_no'][0:4]
-        # 市、省
-        dic['city'], dic['province'] = ci.get_city_province(pre)
+        # 存在电子监管号
+        if dic['ele_no']:
+            pre = dic['ele_no'][0:4]
+            # 市、省
+            dic['city'], dic['province'] = ci.get_city_province(pre)
+        # 不存在监管号
+        else:
+            data = dic['dis']
+            dic['city'], dic['province'] = ci.get_city_province(data)
         # 地理位置
         dic['location'] = table.xpath('./tr[5]/td[2]/span/text()')[0]
         address = dic['city'] + dic['location']
