@@ -31,7 +31,7 @@ def set_day(sd, ed):
 def get_data(url, date):
     """获取form_data参数"""
     resp = requests.get(url, headers=config.headers, cookies=get_cookies())
-    print 'p1-', resp.text
+    # print 'p1-', resp.text
     html_div = etree.HTML(resp.content)
     # pg_str = html_div.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
     tab = '9f2c3acd-0256-4da2-a659-6949c4671a2a:' + date + '~' + date
@@ -46,10 +46,10 @@ def get_data(url, date):
 def parse_day(url, data):
     """按天获取页数"""
     resp = requests.post(url, data=data, headers=config.headers, cookies=get_cookies())
-    print 'p2-', resp.text
+    # print 'p2-', resp.text
     html_div1 = etree.HTML(resp.text)
     pg_str = html_div1.xpath('//div[@class="pager"]/table/tbody/tr/td[1]/text()')[0]
-    print 'str-', pg_str
+    print pg_str
     if pg_str:
         pattern = re.compile(ur'[^\d]+(\d+)[^\d]+')
         page = re.findall(pattern, pg_str)
@@ -69,7 +69,7 @@ def parse_page(url, page, data):
     for i in range(2, end):
         ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
         urls.append(ul)
-    logger.debug(u'page-第%d页' % page)
+    logger.info(u'page-第%d页' % page)
     print u'第%d页' % page
     yield urls  # 返回每一页url列表
 
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)
     for day in set_day(sd, ed):
-        logger.debug(u'date-日期%s' % day)
+        logger.info(u'date-日期%s' % day)
         para = get_data(link, day)
         pg = parse_day(link, para)
         for page in range(1, pg + 1):
@@ -91,7 +91,7 @@ if __name__ == '__main__':
                 urls = page_urls
                 for url in urls:
                     index = urls.index(url)
-                    logger.debug(u'start-第%d条' % index)
+                    logger.info(u'start-第%d条' % index)
                     dic, content = parse_detail(pre_url, url, bk, tk)
-                    logger.debug(u'end-第%d条' % index)
+                    logger.info(u'end-第%d条' % index)
                     # es.index("land_transaction_1_cn", "transaction", dic, dic['id'])
