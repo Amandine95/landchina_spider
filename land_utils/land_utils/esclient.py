@@ -27,5 +27,3 @@ def get_es_client():
         return es_client
 
 
-def store_to_es(item):
-    pass

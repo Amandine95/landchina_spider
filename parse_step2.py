@@ -8,15 +8,10 @@ from utlis import get_date_obj, get_txt
 from cookies import get_cookies
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
-import json
 
-# from land_log import set_log
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
-
-# logger = set_log()
 
 
 def parse_detail(url_prefix, url, bk, tk):
@@ -31,8 +26,10 @@ def parse_detail(url_prefix, url, bk, tk):
     dic['land_name'] = None
     dic['land_source'] = u'新增建设用地(库存)'
     dic['usage_level'] = None
+    dic['usage_level2'] = None
     dic['transaction_type_raw'] = None
     dic['usage_period_raw'] = None
+    dic['usage_period'] = None
     dic['level'] = None
     dic['deal_price'] = None
     dic['area'] = None
@@ -91,6 +88,7 @@ def parse_detail(url_prefix, url, bk, tk):
     # 土地用途
     usage = table.xpath('./tr[7]/td[2]/span/text()')
     if usage:
+        dic['usage_level2'] = usage[0]
         key = [k for k, v in config.usage_form.items() if usage[0] in v]
         if key:
             dic['usage_level'] = key[0]
@@ -102,6 +100,7 @@ def parse_detail(url_prefix, url, bk, tk):
     usage_period_raw = table.xpath('./tr[8]/td[2]/span/text()')
     if usage_period_raw:
         dic['usage_period_raw'] = usage_period_raw[0]
+        dic['usage_period'] = float(dic['usage_period_raw'])
     # 土地级别
     level = table.xpath('./tr[9]/td[2]/span/text()')
     if level:
@@ -141,6 +140,7 @@ def parse_detail(url_prefix, url, bk, tk):
     dic['id'] = url[121:]
     # 处理时间
     dic['deal_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dic['data_source'] = u'中国土地市场网'
     return dic, content
 
 
