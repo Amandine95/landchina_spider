@@ -9,7 +9,6 @@ from cookies import get_cookies
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
 
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -18,7 +17,7 @@ def parse_detail(url_prefix, url, bk, tk):
     """解析详情页"""
     dic = {}
     dic['dis'] = None
-    dic['ele_no'] = None
+    dic['electr_supervise_no'] = None
     dic['city'] = None
     dic['province'] = None
     dic['location'] = None
@@ -39,6 +38,7 @@ def parse_detail(url_prefix, url, bk, tk):
     dic['plot_ratio_high_raw'] = None
     dic['plot_ratio_low_raw'] = None
     dic['plot_ratio'] = None
+    dic['receive_institution'] = None
     dic['geopoint'], dic['geopoint1'] = {}, {}
     url = url_prefix + url
     resp = requests.get(url, headers=config.headers, cookies=get_cookies())
@@ -53,8 +53,8 @@ def parse_detail(url_prefix, url, bk, tk):
     ele_no = table.xpath('./tr[3]/td[4]/span/text()')
     # 存在电子监管号
     if ele_no:
-        dic['ele_no'] = ele_no[0]
-        pre = dic['ele_no'][0:4]
+        dic['electr_supervise_no'] = ele_no[0]
+        pre = dic['electr_supervise_no'][0:4]
         # 市、省
         dic['city'], dic['province'] = ci.get_city_province(pre)
     # 不存在监管号
@@ -116,7 +116,7 @@ def parse_detail(url_prefix, url, bk, tk):
     # 批准单位
     approve_authority = table.xpath('./tr[16]/td[2]/span/text()')
     if approve_authority:
-        dic['approve_authority'] = approve_authority[0]
+        dic['approve_authority'] = approve_authority[0] + u'人民政府'
     # 成交日期
     date = table.xpath('./tr[16]/td[4]/span/text()')
     if date:
@@ -134,6 +134,13 @@ def parse_detail(url_prefix, url, bk, tk):
         dic['plot_ratio'] = float(dic['plot_ratio_low_raw'])
     elif max_limit:
         dic['plot_ratio'] = float(dic['plot_ratio_high_raw'])
+    # 土地使用权人
+    per1 = table.xpath('tr[11]/td[2]/span/text()')
+    per2 = table.xpath('tr[12]/td[1]/span/text()')
+    if per1:
+        dic['receive_institution'] = per1[0]
+    elif per2:
+        dic['receive_institution'] = per2[0]
     # 数据源
     dic['data_source_url'] = url
     # id

@@ -94,4 +94,7 @@ if __name__ == '__main__':
                     logger.info(u'start-第%d条' % index)
                     dic, content = parse_detail(pre_url, url, bk, tk)
                     logger.info(u'end-第%d条' % index)
-                    # es.index("land_transaction_1_cn", "transaction", dic, dic['id'])
+                    es.index("land_transaction_1_cn", "transaction", dic, dic['id'])
+                    print dic['approve_authority']
+                break
+            break

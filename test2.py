@@ -1,14 +1,10 @@
 # -*- coding:utf-8 -*-
-# import re
-#
-# str1 = '添加大纲3364成功 99'
-# pattern = re.compile(r'[^\d]+(\d+)[^\d]+')
-# res = re.findall(pattern, str1)
-# print res
 
-st = u'南京市'
-st1 = u'北京市本级'
-a = st.replace(u'本级', u'')
-b = st1.replace(u'本级', u'')
-print a
-print b
+import datetime
+import time
+
+sd = datetime.datetime.strptime('2019-03-27','%Y-%m-%d')
+ed = datetime.datetime(2019, 03, 28)
+
+if __name__ == '__main__':
+    print sd

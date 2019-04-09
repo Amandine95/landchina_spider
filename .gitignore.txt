@@ -1,3 +1,4 @@
 /.idea/
 /log/
 /*.csv
+/test2.py
