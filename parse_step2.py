@@ -8,6 +8,7 @@ from utlis import get_date_obj, get_txt
 from cookies import get_cookies
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
+import re
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -71,7 +72,10 @@ def parse_detail(url_prefix, url, bk, tk):
     dic['geopoint']['lat'], dic['geopoint']['lon'] = lat, lon
     dic['geopoint1']['tdt_lat'], dic['geopoint1']['tdt_lon'] = geo.get_tianditu_points(tk, address)
     # 区
-    dic['district'] = geo.get_baidu_address(bk, lat, lon)[1]
+    if u'本级' not in dic['dis']:
+        dic['district'] = dic['dis']
+    else:
+        dic['district'] = geo.get_baidu_address(bk, lat, lon)[1]
     # 项目名称
     land_name = table.xpath('./tr[4]/td[2]/span/text()')
     if land_name:
@@ -79,8 +83,11 @@ def parse_detail(url_prefix, url, bk, tk):
     # 土地来源
     s1 = table.xpath('./tr[6]/td[2]/span/text()')
     s2 = table.xpath('./tr[6]/td[4]/span/text()')
-    ls1 = float(get_txt(s1))
-    ls2 = float(get_txt(s2))
+    ls1, ls2 = None, None
+    if s1:
+        ls1 = float(get_txt(s1))
+    if s2:
+        ls2 = float(get_txt(s2))
     if ls1 and ls2 and ls1 == ls2:
         dic['land_source'] = u'现有建设用地'
     elif ls2 and ls2 == 0:
@@ -100,7 +107,13 @@ def parse_detail(url_prefix, url, bk, tk):
     usage_period_raw = table.xpath('./tr[8]/td[2]/span/text()')
     if usage_period_raw:
         dic['usage_period_raw'] = usage_period_raw[0]
-        dic['usage_period'] = float(dic['usage_period_raw'])
+        if dic['usage_period_raw'].isdigit():
+            dic['usage_period'] = float(dic['usage_period_raw'])
+        else:
+            res = dic['usage_period_raw'].split(u';')
+            for i in res:
+                if dic['usage_level2'] in i:
+                    dic['usage_period'] = float(re.match(ur'.*?(\d+)', i).group(1))
     # 土地级别
     level = table.xpath('./tr[9]/td[2]/span/text()')
     if level:
@@ -116,7 +129,8 @@ def parse_detail(url_prefix, url, bk, tk):
     # 批准单位
     approve_authority = table.xpath('./tr[16]/td[2]/span/text()')
     if approve_authority:
-        dic['approve_authority'] = approve_authority[0] + u'人民政府'
+        dic['approve_authority'] = approve_authority[0] if u'人民政府' in approve_authority[0] else approve_authority[
+                                                                                                    0] + u'人民政府'
     # 成交日期
     date = table.xpath('./tr[16]/td[4]/span/text()')
     if date:
@@ -128,11 +142,11 @@ def parse_detail(url_prefix, url, bk, tk):
     # 容积率
     min_limit = table.xpath('tr[13]/td[2]//tr[2]/td[2]/span/text()')
     max_limit = table.xpath('tr[13]/td[2]//tr[2]/td[4]/span/text()')
-    dic['plot_ratio_low_raw'] = get_txt(min_limit)
-    dic['plot_ratio_high_raw'] = get_txt(max_limit)
     if min_limit:
+        dic['plot_ratio_low_raw'] = get_txt(min_limit)
         dic['plot_ratio'] = float(dic['plot_ratio_low_raw'])
     elif max_limit:
+        dic['plot_ratio_high_raw'] = get_txt(max_limit)
         dic['plot_ratio'] = float(dic['plot_ratio_high_raw'])
     # 土地使用权人
     per1 = table.xpath('tr[11]/td[2]/span/text()')

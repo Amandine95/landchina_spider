@@ -1,10 +1,15 @@
 # -*- coding:utf-8 -*-
 
-import datetime
-import time
+import re
 
-sd = datetime.datetime.strptime('2019-03-27','%Y-%m-%d')
-ed = datetime.datetime(2019, 03, 28)
+
+def test(a):
+    a = a if u'人民政府' in a else a + u'人民政府'
+    print a
+
 
 if __name__ == '__main__':
-    print sd
+    b = u'市人民政府'
+    c = u'区'
+    test(b)
+    test(c)
