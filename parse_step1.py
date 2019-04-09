@@ -93,5 +93,3 @@ if __name__ == '__main__':
                     es.index("land_transaction_1_cn", "transaction", dic, dic['id'])
                     # print dic['usage_period']
                     logger.warning(u'end-第%d条url;%s' % (index, dic['data_source_url']))
-                break
-            break
