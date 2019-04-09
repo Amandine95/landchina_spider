@@ -10,6 +10,7 @@ import re
 from parse_step2 import parse_detail
 from cookies import get_cookies
 from land_utils.land_utils.esclient import store_to_es
+import pickle
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -76,10 +77,10 @@ def parse_page(url, pn, data):
 
 
 if __name__ == '__main__':
-    pre_url = 'http://www.landchina.com/'
-    link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'
-    bk = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
-    tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'
+    pre_url = 'http://www.landchina.com/'  # url前缀
+    link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'  # 初始url
+    bk = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'  # 百度地图key
+    tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'  # 天地图key
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)
     with open(u'deal_record.csv', 'a+') as f:
@@ -88,6 +89,7 @@ if __name__ == '__main__':
             pg = parse_day(link, para)
             for u in parse_page(link, pg, para):  # u 每一页的链接列表
                 dic, content = parse_detail(pre_url, u, bk, tk)
-                line = '日期%s,内容%s' % (day, content)
+                line = '\"日期%s\",\"内容%s\"' % (day, content.replace('mainModuleContainer_1855_1856_ctl00_ctl00_p1_', ''))
                 f.write(line)
+                # pickle.dump(content, f)
                 store_to_es(dic)
