@@ -1,0 +1,569 @@
+日期2019-03-28
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 18115
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17782
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 17782
+第1页
+第0条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=06bf8941-735d-4a11-b659-8066d7a015f3 HTTP/1.1" 200 12931
+Starting new HTTP connection (1): 192.168.1.178:29200
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":7,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第0条-end
+第1条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=18cb56ea-ac66-4ce5-a743-63ac1df40686 HTTP/1.1" 200 12928
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":4,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第1条-end
+第2条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=5b84debe-c9e4-4e2d-8c2c-a789add7ec1e HTTP/1.1" 200 12912
+Starting new HTTP connection (1): 192.168.1.179:29200
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第2条-end
+第3条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=130398f4-a55d-471c-a028-b191490c69f5 HTTP/1.1" 200 12967
+Starting new HTTP connection (1): 192.168.1.101:29200
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第3条-end
+第4条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=32ce63f8-de87-46b5-80b6-856936e36b0d HTTP/1.1" 200 12941
+Starting new HTTP connection (1): 192.168.1.100:29200
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第4条-end
+第5条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=69050a55-8b8c-46d1-a20c-60c7cc482e92 HTTP/1.1" 200 12947
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第5条-end
+第6条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=99447e35-faf9-4dd9-88ba-2783fbd4abe5 HTTP/1.1" 200 12923
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第6条-end
+第7条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=c0d8f5ad-b181-4c64-97b1-3a4a8d79443a HTTP/1.1" 200 12955
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第7条-end
+第8条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=a3667458-9b03-42e7-a6dc-0ae2581a74b1 HTTP/1.1" 200 12930
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第8条-end
+第9条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 716
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 453
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=14d8100e-71c8-444f-a1ff-d567732d6aaa HTTP/1.1" 200 12959
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第9条-end
+第10条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=2cccea2c-fc82-478f-a7b1-c2eb0d5ccc32 HTTP/1.1" 200 12988
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2181
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4412"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":9,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441200","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "肇庆市", "county_id": "441200", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441204","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "高要区", "county_id": "441204", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441284","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "四会市", "county_id": "441284", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441223","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "广宁县", "county_id": "441223", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441224","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "怀集县", "county_id": "441224", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441202","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "端州区", "county_id": "441202", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441203","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "鼎湖区", "county_id": "441203", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441226","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "德庆县", "county_id": "441226", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441225","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "封开县", "county_id": "441225", "province_id": "440000"}}]}}
+第10条-end
+第11条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=9016e9a2-4d1c-4932-aa40-df4d3cbf9943 HTTP/1.1" 200 12979
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第11条-end
+第12条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=8c1f1921-d4ca-46be-bc48-97382eadf04c HTTP/1.1" 200 12960
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第12条-end
+第13条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 716
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 453
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=78ab1c80-42e9-4d75-b4eb-948f1d3e9554 HTTP/1.1" 200 12939
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第13条-end
+第14条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=7f46d54c-a45d-4c62-a118-e2a7ebe988e4 HTTP/1.1" 200 12955
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第14条-end
+第15条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=038a0287-5142-4ebb-bc66-ba3b0e7d7766 HTTP/1.1" 200 12932
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第15条-end
+第16条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 716
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 453
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=d76edd64-14e1-4085-a753-d0cbfb326982 HTTP/1.1" 200 13022
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2181
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4412"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":9,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441200","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "肇庆市", "county_id": "441200", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441204","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "高要区", "county_id": "441204", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441284","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "四会市", "county_id": "441284", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441223","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "广宁县", "county_id": "441223", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441224","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "怀集县", "county_id": "441224", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441202","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "端州区", "county_id": "441202", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441203","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "鼎湖区", "county_id": "441203", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441226","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "德庆县", "county_id": "441226", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441225","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "封开县", "county_id": "441225", "province_id": "440000"}}]}}
+第16条-end
+第17条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=19d4ec1b-cf19-4ad0-bd77-7f2370146083 HTTP/1.1" 200 12920
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第17条-end
+第18条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=fd60152d-d6ed-4809-af4a-53c71cd6ccd4 HTTP/1.1" 200 12964
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第18条-end
+第19条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=7311dfe2-26eb-442a-96db-62295417f176 HTTP/1.1" 200 12961
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第19条-end
+第20条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=ae724732-218e-4303-a1ac-b267e926da1c HTTP/1.1" 200 13020
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2181
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4412"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":9,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441200","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "肇庆市", "county_id": "441200", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441204","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "高要区", "county_id": "441204", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441284","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "四会市", "county_id": "441284", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441223","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "广宁县", "county_id": "441223", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441224","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "怀集县", "county_id": "441224", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441202","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "端州区", "county_id": "441202", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441203","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "鼎湖区", "county_id": "441203", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441226","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "德庆县", "county_id": "441226", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441225","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "封开县", "county_id": "441225", "province_id": "440000"}}]}}
+第20条-end
+第21条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=7d4e9359-1b34-4b63-a1f8-c8a273482ca6 HTTP/1.1" 200 12937
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第21条-end
+第22条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=d0e74775-df9e-41cd-9fd0-4d6f8981a834 HTTP/1.1" 200 12916
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第22条-end
+第23条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=b3592779-a73a-49d7-8287-232be4dfc00f HTTP/1.1" 200 13025
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2181
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4412"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":9,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441200","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "肇庆市", "county_id": "441200", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441204","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "高要区", "county_id": "441204", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441284","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "四会市", "county_id": "441284", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441223","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "广宁县", "county_id": "441223", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441224","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "怀集县", "county_id": "441224", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441202","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "端州区", "county_id": "441202", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441203","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "鼎湖区", "county_id": "441203", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441226","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "德庆县", "county_id": "441226", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441225","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "封开县", "county_id": "441225", "province_id": "440000"}}]}}
+第23条-end
+第24条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=5ef71ce4-6911-4ac9-b429-a2cf8f5942b4 HTTP/1.1" 200 12936
+http://192.168.1.178:29200 "GET /_nodes/_all/http HTTP/1.1" 200 1897
+GET http://192.168.1.178:29200/_nodes/_all/http [status:200 request:0.000s]
+> None
+< {"_nodes":{"total":5,"successful":5,"failed":0},"cluster_name":"asien","nodes":{"Yyt1-qYiRhCvJTkFqB7ReQ":{"name":"node-1","transport_address":"192.168.1.135:29300","host":"192.168.1.135","ip":"192.168.1.135","version":"5.3.2","build_hash":"3068195","roles":["master","data","ingest"],"http":{"bound_address":["127.0.0.1:29200","192.168.1.135:29200"],"publish_address":"192.168.1.135:29200","max_content_length_in_bytes":104857600}},"wywZOCyeT4-043NW4bTv-Q":{"name":"node-4","transport_address":"192.168.1.179:29300","host":"192.168.1.179","ip":"192.168.1.179","version":"5.3.2","build_hash":"3068195","roles":["master","data","ingest"],"http":{"bound_address":["127.0.0.1:29200","192.168.1.179:29200"],"publish_address":"192.168.1.179:29200","max_content_length_in_bytes":104857600}},"gPpWsBTkTJOCCVNhwieN0A":{"name":"node-10","transport_address":"192.168.1.100:29300","host":"192.168.1.100","ip":"192.168.1.100","version":"5.3.2","build_hash":"3068195","roles":["master","data","ingest"],"attributes":{"rack":"r1"},"http":{"bound_address":["127.0.0.1:29200","192.168.1.100:29200"],"publish_address":"192.168.1.100:29200","max_content_length_in_bytes":104857600}},"d703U1t7Sd6FwtK-0LnL3A":{"name":"node-3","transport_address":"192.168.1.178:29300","host":"192.168.1.178","ip":"192.168.1.178","version":"5.3.2","build_hash":"3068195","roles":["master","data","ingest"],"http":{"bound_address":["127.0.0.1:29200","192.168.1.178:29200"],"publish_address":"192.168.1.178:29200","max_content_length_in_bytes":104857600}},"PktQVsaJQ7-atnPiHYkuGQ":{"name":"node-11","transport_address":"192.168.1.101:29300","host":"192.168.1.101","ip":"192.168.1.101","version":"5.3.2","build_hash":"3068195","roles":["master","data","ingest"],"attributes":{"rack":"r1"},"http":{"bound_address":["127.0.0.1:29200","192.168.1.101:29200"],"publish_address":"192.168.1.101:29200","max_content_length_in_bytes":104857600}}}}
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第24条-end
+第25条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=02827f17-b891-41cb-91b9-92ca41f47b8f HTTP/1.1" 200 12927
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第25条-end
+第26条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=026a639a-4840-4ff4-9907-8d2992f39004 HTTP/1.1" 200 12948
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第26条-end
+第27条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=67b48719-db3c-48f0-8bb3-7f0a96920790 HTTP/1.1" 200 12973
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第27条-end
+第28条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=4273e50e-3ad6-4c42-be5c-2be1fffebffb HTTP/1.1" 200 12937
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第28条-end
+第29条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=1471660b-5de1-4c4d-b4d5-9cfa5a58ffd1 HTTP/1.1" 200 13005
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2181
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4412"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":3,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":9,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441200","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "肇庆市", "county_id": "441200", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441204","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "高要区", "county_id": "441204", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441284","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "四会市", "county_id": "441284", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441223","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "广宁县", "county_id": "441223", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441224","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "怀集县", "county_id": "441224", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441202","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "端州区", "county_id": "441202", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441203","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "鼎湖区", "county_id": "441203", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441226","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "德庆县", "county_id": "441226", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"441225","_score":1.0,"_source":{"province": "广东省", "city": "肇庆市", "city_id": "441200", "county": "封开县", "county_id": "441225", "province_id": "440000"}}]}}
+第29条-end
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "POST /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 18048
+第2页
+第0条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=77d5889c-845d-4686-9315-719a38b2ea60 HTTP/1.1" 200 12938
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第0条-end
+第1条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=c01bbdb5-c6a4-4b9a-9ce2-3948c6d84399 HTTP/1.1" 200 12936
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第1条-end
+第2条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=ba12c684-4076-4df4-99a4-5e94aca80639 HTTP/1.1" 200 12940
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第2条-end
+第3条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 716
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=460f0fa5-62a2-4087-87a7-9480f520c1e1 HTTP/1.1" 200 12965
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":3,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第3条-end
+第4条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=c14efb6b-b341-4380-af34-8aa5f15db81d HTTP/1.1" 200 12936
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第4条-end
+第5条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=05571aff-7323-44b6-bfc6-b8a840238517 HTTP/1.1" 200 12935
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":3,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第5条-end
+第6条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=35108766-00bd-4246-89e2-7604575b7a13 HTTP/1.1" 200 12819
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 2411
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"3509"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":10,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350922","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "古田县", "county_id": "350922", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350925","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "周宁县", "county_id": "350925", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350900","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "宁德市", "county_id": "350900", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350923","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "屏南县", "county_id": "350923", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350924","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "寿宁县", "county_id": "350924", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350902","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "蕉城区", "county_id": "350902", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350921","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "霞浦县", "county_id": "350921", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350926","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "柘荣县", "county_id": "350926", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350981","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "福安市", "county_id": "350981", "province_id": "350000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"350982","_score":1.0,"_source":{"province": "福建省", "city": "宁德市", "city_id": "350900", "county": "福鼎市", "county_id": "350982", "province_id": "350000"}}]}}
+第6条-end
+第7条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=deee10a4-0c67-409d-bb6c-3f90036b5972 HTTP/1.1" 200 12941
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.016s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第7条-end
+第8条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=0d50b7e8-4471-4c48-9262-4ced031babb6 HTTP/1.1" 200 12938
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第8条-end
+第9条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 716
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 453
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=0b056341-0fb1-4bd0-8b00-bdc3f5324bcc HTTP/1.1" 200 12942
+http://192.168.1.178:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.178:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第9条-end
+第10条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=1d693a12-473b-4ef2-8f08-675750c3b128 HTTP/1.1" 200 12975
+http://192.168.1.179:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.179:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第10条-end
+第11条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=817e19c6-029d-4d5b-b4bc-a1b233ce05e9 HTTP/1.1" 200 12942
+http://192.168.1.135:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.135:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第11条-end
+第12条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=152ed58d-4b6e-4d38-9010-7d8b9dafc1e4 HTTP/1.1" 200 13017
+http://192.168.1.101:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.101:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.000s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第12条-end
+第13条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=315f42c1-2f6f-4dd1-91a9-387c4bd1d61e HTTP/1.1" 200 12941
+http://192.168.1.100:29200 "GET /region_metadata_2017_cn/meta/_search HTTP/1.1" 200 1494
+GET http://192.168.1.100:29200/region_metadata_2017_cn/meta/_search [status:200 request:0.015s]
+> {"query":{"bool":{"must":[{"prefix":{"city_id":"4406"}}],"must_not":[],"should":[]}},"from":0,"size":10,"sort":[],"aggs":{}}
+< {"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":1.0,"hits":[{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440607","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "三水区", "county_id": "440607", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440600","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "佛山市", "county_id": "440600", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440605","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "南海区", "county_id": "440605", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440608","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "高明区", "county_id": "440608", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440606","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "顺德区", "county_id": "440606", "province_id": "440000"}},{"_index":"region_metadata_2017_cn","_type":"meta","_id":"440604","_score":1.0,"_source":{"province": "广东省", "city": "佛山市", "city_id": "440600", "county": "禅城区", "county_id": "440604", "province_id": "440000"}}]}}
+第13条-end
+第14条-start
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default HTTP/1.1" 200 717
+Starting new HTTP connection (1): www.landchina.com:80
+http://www.landchina.com:80 "GET /default.aspx?tabid=263&ComName=default&security_verify_data=313932302c31303830 HTTP/1.1" 200 454
+Starting new HTTP connection (1): www.landchina.com:80

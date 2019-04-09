@@ -6,17 +6,16 @@ import config
 from lxml import etree
 import datetime
 import re
-# from land_log import set_log
+from land_log import set_log
 from parse_step2 import parse_detail
 from cookies import get_cookies
-from land_utils.land_utils.esclient import store_to_es
-import pickle
+from land_utils.land_utils.esclient import get_es_client
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-
-# logger = set_log()
+logger = set_log()
+es = get_es_client()
 
 
 def set_day(sd, ed):
@@ -59,21 +58,20 @@ def parse_day(url, data):
             return pn
 
 
-def parse_page(url, pn, data):
+def parse_page(url, page, data):
     """解析每一页"""
-    for page in range(1, pn + 1):
-        urls = []
-        data['TAB_QuerySubmitPagerData'] = '%d' % page
-        resp = requests.post(url, data=data, headers=config.headers, cookies=get_cookies())
-        html_div2 = etree.HTML(resp.text)
-        data_list = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr')
-        end = len(data_list) + 1
-        for i in range(2, end):
-            ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
-            urls.append(ul)
-        # logger.debug(u'第%d页' % page)
-        print u'第%d页' % page
-        yield urls  # 返回每一页url列表
+    urls = []
+    data['TAB_QuerySubmitPagerData'] = '%d' % page
+    resp = requests.post(url, data=data, headers=config.headers, cookies=get_cookies())
+    html_div2 = etree.HTML(resp.text)
+    data_list = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr')
+    end = len(data_list) + 1
+    for i in range(2, end):
+        ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
+        urls.append(ul)
+    logger.debug(u'page-第%d页' % page)
+    print u'第%d页' % page
+    yield urls  # 返回每一页url列表
 
 
 if __name__ == '__main__':
@@ -83,13 +81,17 @@ if __name__ == '__main__':
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'  # 天地图key
     sd = datetime.datetime(2019, 3, 27)
     ed = datetime.datetime(2019, 3, 28)
-    with open(u'deal_record.csv', 'a+') as f:
-        for day in set_day(sd, ed):
-            para = get_data(link, day)
-            pg = parse_day(link, para)
-            for u in parse_page(link, pg, para):  # u 每一页的链接列表
-                dic, content = parse_detail(pre_url, u, bk, tk)
-                line = '\"日期%s\",\"内容%s\"' % (day, content.replace('mainModuleContainer_1855_1856_ctl00_ctl00_p1_', ''))
-                f.write(line)
-                # pickle.dump(content, f)
-                store_to_es(dic)
+    for day in set_day(sd, ed):
+        logger.debug(u'date-日期%s' % day)
+        para = get_data(link, day)
+        pg = parse_day(link, para)
+        for page in range(1, pg + 1):
+            pages_urls = parse_page(link, page, para)  # 所有页的urls列表
+            for page_urls in pages_urls:  # u 每一页的urls
+                urls = page_urls
+                for url in urls:
+                    index = urls.index(url)
+                    logger.debug(u'start-第%d条' % index)
+                    dic, content = parse_detail(pre_url, url, bk, tk)
+                    logger.debug(u'end-第%d条' % index)
+                    # es.index("land_transaction_1_cn", "transaction", dic, dic['id'])
