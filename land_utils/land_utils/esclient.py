@@ -27,3 +27,12 @@ def get_es_client():
         return es_client
 
 
+def is_new(url, index_name, index_type):
+    """判断详情url是否存在es"""
+    sql = '{"query":{"bool":{"must":[{"term":{"data_source_url":"%s"}}],"must_not":[],"should":[]}},"from":0,"size":250,"sort":[],"aggs":{}}' % url
+    es = get_es_client()
+    try:
+        result = es.search(index_name, index_type, body=sql)['hits']['total']
+        return result
+    except Exception as e:
+        print e
