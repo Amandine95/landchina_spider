@@ -5,7 +5,6 @@ import requests
 import config
 from lxml import etree
 from utlis import get_date_obj, get_txt
-from cookies import get_cookies
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
 import re
@@ -14,7 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
-def parse_detail(url_prefix, url, bk, tk):
+def parse_detail(url_prefix, url, bk, tk, cookies):
     """解析详情页"""
     dic = {}
     dic['dis'] = None
@@ -42,7 +41,7 @@ def parse_detail(url_prefix, url, bk, tk):
     dic['receive_institution'] = None
     dic['geopoint'], dic['geopoint1'] = {}, {}
     url = url_prefix + url
-    resp = requests.get(url, headers=config.headers, cookies=get_cookies())
+    resp = requests.get(url, headers=config.headers, cookies=cookies)
     html_div = etree.HTML(resp.text)
     table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]  # 数据所在table
     content = etree.tostring(table, method='html')
@@ -170,4 +169,4 @@ if __name__ == '__main__':
     url = 'default.aspx?tabid=386&comname=default&wmguid=75c72564-ffd9-426a-954b-8ac2df0903b7&recorderguid=c3306301-f607-4808-95c1-27de1faba4dd'
     bk = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'
-    print parse_detail(url_pre, url, bk, tk)[0]
+    # print parse_detail(url_pre, url, bk, tk,)[0]
