@@ -10,12 +10,17 @@ from land_log import set_log
 from parse_step2 import parse_detail
 from cookies import get_cookies
 from land_utils.land_utils.esclient import get_es_client
+from requests.adapters import HTTPAdapter
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 logger = set_log()
 es = get_es_client()
+
+s = requests.Session()
+s.mount('http://', HTTPAdapter(max_retries=5))  # 增加重试次数
+s.keep_alive = False  # 关闭多余连接
 
 
 def set_day(sd, ed):
@@ -83,7 +88,7 @@ if __name__ == '__main__':
         logger.warning(u'date-日期%s' % day)
         para = get_data(link, day, cookie)
         pg = parse_day(link, para, cookie)
-        for page in range(15, pg + 1):  # 起始页截止页
+        for page in range(26, pg + 1):  # 起始页截止页
             pages_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
             for page_urls in pages_urls:  # u 每一页的urls
                 urls = page_urls
