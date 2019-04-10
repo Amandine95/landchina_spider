@@ -10,7 +10,7 @@ sys.setdefaultencoding('utf-8')
 def set_log():
     logger = logging.getLogger()
     logger.setLevel(logging.WARNING)
-    handler1 = logging.FileHandler(u'log/page.log', 'w+')
+    handler1 = logging.FileHandler(u'log/page.log', 'a+')
     handler1.setLevel(logging.WARNING)
     handler1.setFormatter(logging.Formatter("%(message)s"))
 
