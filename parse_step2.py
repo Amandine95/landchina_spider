@@ -144,7 +144,7 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     if min_limit:
         dic['plot_ratio_low_raw'] = get_txt(min_limit)
         dic['plot_ratio'] = float(dic['plot_ratio_low_raw'])
-    elif max_limit:
+    if max_limit:
         dic['plot_ratio_high_raw'] = get_txt(max_limit)
         dic['plot_ratio'] = float(dic['plot_ratio_high_raw'])
     # 土地使用权人

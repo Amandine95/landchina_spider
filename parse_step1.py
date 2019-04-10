@@ -82,13 +82,13 @@ if __name__ == '__main__':
     link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'  # 初始url
     bk = 'jTkxA1kZ0tGqTpPGYv0DVT701vOQRowI'  # 百度地图key
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'  # 天地图key
-    sd = datetime.datetime(2018, 11, 22)
-    ed = datetime.datetime(2018, 11, 23)
+    sd = datetime.datetime(2018, 11, 29)
+    ed = datetime.datetime(2018, 11, 30)
     for day in set_day(sd, ed):
         logger.warning(u'date-日期%s' % day)
         para = get_data(link, day, cookie)
         pg = parse_day(link, para, cookie)
-        for page in range(26, pg + 1):  # 起始页截止页
+        for page in range(1, pg + 1):  # 起始页截止页
             pages_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
             for page_urls in pages_urls:  # u 每一页的urls
                 urls = page_urls
