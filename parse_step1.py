@@ -11,6 +11,7 @@ from parse_step2 import parse_detail
 from cookies import get_cookies
 from land_utils.land_utils.esclient import get_es_client, is_new
 from requests.adapters import HTTPAdapter
+import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -84,17 +85,18 @@ if __name__ == '__main__':
     tk = 'fd0b585cad4c92e1440c10a0c6bd3c76'  # 天地图key
     index_name = 'land_transaction_1_cn'
     index_type = 'transaction'
-    sd = datetime.datetime(2018, 11, 29)
-    ed = datetime.datetime(2018, 11, 30)
+    sd = datetime.datetime(2018, 11, 26)
+    ed = datetime.datetime(2018, 11, 27)
     for day in set_day(sd, ed):
         logger.warning(u'date-日期%s' % day)
         para = get_data(link, day, cookie)
         pg = parse_day(link, para, cookie)
-        for page in range(49, pg + 1):  # 起始页截止页
+        for page in range(1, pg + 1):  # 起始页截止页
             pages_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
             for page_urls in pages_urls:  # u 每一页的urls
                 urls = page_urls
                 for url in urls:
+                    time.sleep(0.5)
                     u = pre_url + url
                     res = is_new(u, index_name, index_type)  # 判断是否已存入es
                     # 不存在es里
