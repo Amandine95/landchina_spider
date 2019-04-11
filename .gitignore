@@ -1,4 +1,7 @@
 /.idea/
 /log/
-/*.csv
-/test2.py
+*.csv
+test2.py
+*.pyc
+land.js
+cookies.md

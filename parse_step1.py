@@ -91,7 +91,7 @@ if __name__ == '__main__':
         logger.warning(u'date-日期%s' % day)
         para = get_data(link, day, cookie)
         pg = parse_day(link, para, cookie)
-        for page in range(1, pg + 1):  # 起始页截止页
+        for page in range(30, pg + 1):  # 起始页截止页
             pages_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
             for page_urls in pages_urls:  # u 每一页的urls
                 urls = page_urls
@@ -102,9 +102,14 @@ if __name__ == '__main__':
                     # 不存在es里
                     if not res:
                         index = urls.index(url)
-                        logger.warning(u'start-第%d条' % index)
-                        dic, content = parse_detail(pre_url, url, bk, tk, cookie)
-                        es.index(index_name, index_type, dic, dic['id'])
-                        logger.warning(u'end-第%d条url;%s' % (index, dic['data_source_url']))
+                        try:
+                            logger.warning(u'start-第%d条' % index)
+                            dic, content = parse_detail(pre_url, url, bk, tk, cookie)
+                            es.index(index_name, index_type, dic, dic['id'])
+                        except requests.exceptions.ConnectionError as e:
+                            dic, content = parse_detail(pre_url, url, bk, tk, cookie)
+                            es.index(index_name, index_type, dic, dic['id'])
+                        finally:
+                            logger.warning(u'end-第%d条url;%s' % (index, dic['data_source_url']))
                     else:
                         continue
