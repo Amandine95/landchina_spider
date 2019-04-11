@@ -1,15 +1,8 @@
 # -*- coding:utf-8 -*-
 
-import re
+import ConfigParser
 
-
-def test(a):
-    a = a if u'人民政府' in a else a + u'人民政府'
-    print a
-
-
-if __name__ == '__main__':
-    b = u'市人民政府'
-    c = u'区'
-    test(b)
-    test(c)
+cf = ConfigParser.ConfigParser()
+cf.read(u'config.ini')
+bk = cf.get('key', 'baidu_key')
+print type(bk)

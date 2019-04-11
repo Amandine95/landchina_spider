@@ -2,7 +2,7 @@
 
 import sys
 import requests
-import config
+import params
 from lxml import etree
 from utlis import get_date_obj, get_txt
 from land_utils.land_utils import cityid as ci, geoinformation as geo
@@ -30,8 +30,10 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     dic['usage_period_raw'] = None
     dic['usage_period'] = None
     dic['level'] = None
+    dic['deal_price_raw'] = None
     dic['deal_price'] = None
-    dic['area'] = None
+    dic['area_total_raw'] = None
+    dic['area_total'] = None
     dic['approve_authority'] = None
     dic['transaction_date'] = None
     dic['usage_type'] = None
@@ -41,7 +43,7 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     dic['receive_institution'] = None
     dic['geopoint'], dic['geopoint1'] = {}, {}
     url = url_prefix + url
-    resp = requests.get(url, headers=config.headers, cookies=cookies)
+    resp = requests.get(url, headers=params.headers, cookies=cookies)
     html_div = etree.HTML(resp.text)
     table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]  # 数据所在table
     content = etree.tostring(table, method='html')
@@ -95,7 +97,7 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     usage = table.xpath('./tr[7]/td[2]/span/text()')
     if usage:
         dic['usage_level2'] = usage[0]
-        key = [k for k, v in config.usage_form.items() if usage[0] in v]
+        key = [k for k, v in params.usage_form.items() if usage[0] in v]
         if key:
             dic['usage_level'] = key[0]
     # 供地方式
@@ -120,11 +122,13 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     # 成交价格
     price = table.xpath('./tr[9]/td[4]/span/text()')
     if price:
+        dic['deal_price_raw'] = price[0]
         dic['deal_price'] = round(float(price[0]) * 10000, 2)
     # 面积
     area = table.xpath('./tr[6]/td[2]/span/text()')
     if area:
-        dic['area'] = round(float(area[0]) * 10000, 2)
+        dic['area_total_raw'] = area[0]
+        dic['area_total'] = round(float(area[0]) * 10000, 2)
     # 批准单位
     approve_authority = table.xpath('./tr[16]/td[2]/span/text()')
     if approve_authority:
@@ -159,7 +163,7 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     # id
     dic['id'] = url[121:]
     # 处理时间
-    dic['deal_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dic['crawl_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     dic['data_source'] = u'中国土地市场网'
     return dic, content
 
