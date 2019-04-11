@@ -13,6 +13,7 @@ from land_utils.land_utils.esclient import get_es_client, is_new
 from requests.adapters import HTTPAdapter
 import time
 import ConfigParser
+from utils import get_end_day
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -28,10 +29,10 @@ s.keep_alive = False  # 关闭多余连接
 def set_day(sd, ed):
     """设置日期"""
     while True:
-        sd += datetime.timedelta(days=1)
         scratch_date = sd.strftime('%Y-%m-%d')
         yield scratch_date
-        if sd == ed:
+        sd += datetime.timedelta(days=1)
+        if sd > ed:
             break
 
 
@@ -77,20 +78,27 @@ def parse_page(url, page, data, cookies):
     yield urls  # 返回每一页url列表
 
 
-cf = ConfigParser.ConfigParser()  # 读取配置文件
-cf.read(u'config.ini')
 cookie = get_cookies()  # 获取cookies
+
 pre_url = 'http://www.landchina.com/'  # url前缀
 link = 'http://www.landchina.com/default.aspx?tabid=263&ComName=default'  # 初始url
+
+cf = ConfigParser.ConfigParser()  # 读取配置文件
+cf.read(u'config.ini')
 bk = cf.get('key', 'baidu_key')  # 百度地图key
 tk = cf.get('key', 'tianditu_key')  # 天地图key
 index_name = cf.get('es_index', 'index_name')
 index_type = cf.get('es_index', 'index_type')
+
+day_list = get_end_day()
 sd = datetime.datetime.strptime(sys.argv[1], '%Y-%m-%d')
 ed = datetime.datetime.strptime(sys.argv[2], '%Y-%m-%d')
 for day in set_day(sd, ed):
+    if day in day_list:
+        print u'%s已完成' % day
+        continue
     print u'日期:%s' % day
-    logger.warning(u'day_start-%s' % day)
+    logger.warning(u'day_start--%s' % day)
     para = get_data(link, day, cookie)
     pg = parse_day(link, para, cookie)
     for page in range(1, pg + 1):  # 起始页截止页
@@ -111,9 +119,10 @@ for day in set_day(sd, ed):
                         print u'end-第%d条' % index  # 成功
                     except Exception as e:
                         print e
-                        logger.warning(u'fail_url-%s' % u)  # 失败的url
+                        logger.warning(u'fail_url--%s' % u)  # 失败的url
                         continue
 
                 else:
                     continue
-    logger.warning(u'day_end-%s' % day)
+        logger.warning(u'page_end--%d' % page)
+    logger.warning(u'day_end--%s' % day)

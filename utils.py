@@ -34,6 +34,20 @@ def get_txt(li):
     return ''.join(li).replace(u'\xa0', u'')
 
 
+def get_end_day():
+    """获取成功日期"""
+    day_list = []
+    with open(u'log/page.log', 'r+') as f:
+        res = f.readlines()
+        for line in res:
+            if u'day_end' in line:
+                t = line.split('--')[1].replace(u'\n', '')
+                day_list.append(t)
+        new_list = list(set(day_list))
+        new_list.sort(key=day_list.index)
+        return new_list
+
+
 if __name__ == '__main__':
     st = u'2017年09月11日'
     print get_date_obj(st)

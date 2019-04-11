@@ -4,7 +4,7 @@ import sys
 import requests
 import params
 from lxml import etree
-from utlis import get_date_obj, get_txt
+from utils import get_date_obj, get_txt
 from land_utils.land_utils import cityid as ci, geoinformation as geo
 import time
 import re
