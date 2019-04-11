@@ -73,7 +73,6 @@ def parse_page(url, page, data, cookies):
     for i in range(2, end):
         ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
         urls.append(ul)
-    logger.warning(u'page-第%d页' % page)
     print u'第%d页' % page
     yield urls  # 返回每一页url列表
 
@@ -91,7 +90,7 @@ sd = datetime.datetime.strptime(sys.argv[1], '%Y-%m-%d')
 ed = datetime.datetime.strptime(sys.argv[2], '%Y-%m-%d')
 for day in set_day(sd, ed):
     print u'日期:%s' % day
-    logger.warning(u'date-日期%s' % day)
+    logger.warning(u'day_start-%s' % day)
     para = get_data(link, day, cookie)
     pg = parse_day(link, para, cookie)
     for page in range(1, pg + 1):  # 起始页截止页
@@ -106,10 +105,10 @@ for day in set_day(sd, ed):
                 if not res:
                     index = urls.index(url)
                     try:
-                        logger.warning(u'start-第%d条' % index)
+                        print u'start-第%d条' % index
                         dic, content = parse_detail(pre_url, url, bk, tk, cookie)
                         es.index(index_name, index_type, dic, dic['id'])
-                        logger.warning(u'end-第%d条url;%s' % (index, dic['data_source_url']))  # 成功的url
+                        print u'end-第%d条' % index  # 成功
                     except Exception as e:
                         print e
                         logger.warning(u'fail_url-%s' % u)  # 失败的url
@@ -117,3 +116,4 @@ for day in set_day(sd, ed):
 
                 else:
                     continue
+    logger.warning(u'day_end-%s' % day)
