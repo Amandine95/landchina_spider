@@ -1,7 +1,9 @@
-/.idea/
-/log/
+.idea
+log
 *.csv
 test2.py
 *.pyc
 land.js
 cookies.md
+land_utils/*.pyc
+land_utils/land_utils/*.pyc
