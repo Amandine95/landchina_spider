@@ -34,6 +34,7 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     dic['deal_price'] = None
     dic['area_total_raw'] = None
     dic['area_total'] = None
+    dic['land_transaction_price'] = None
     dic['approve_authority'] = None
     dic['transaction_date'] = None
     dic['usage_type'] = None
@@ -43,7 +44,8 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     dic['receive_institution'] = None
     dic['geopoint'], dic['geopoint1'] = {}, {}
     url = url_prefix + url
-    resp = requests.get(url, headers=params.headers, cookies=cookies)
+    resp = requests.get(url, headers=params.headers, cookies=cookies, timeout=10)
+    print u'------------拿到页面--------------------'
     html_div = etree.HTML(resp.text)
     table = html_div.xpath('//*[@id="mainModuleContainer_1855_1856_ctl00_ctl00_p1_f1"]/tbody')[0]  # 数据所在table
     content = etree.tostring(table, method='html')
@@ -70,8 +72,10 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     address = dic['city'] + dic['location']
     # 坐标
     lat, lon = geo.get_baidu_points(bk, address)
+    print u'-------------百度坐标-------------------'
     dic['geopoint']['lat'], dic['geopoint']['lon'] = lat, lon
     dic['geopoint1']['tdt_lat'], dic['geopoint1']['tdt_lon'] = geo.get_tianditu_points(tk, address)
+    print u'-------------天地图坐标-----------------'
     # 区
     if u'本级' not in dic['dis']:
         dic['district'] = dic['dis']
@@ -129,6 +133,9 @@ def parse_detail(url_prefix, url, bk, tk, cookies):
     if area:
         dic['area_total_raw'] = area[0]
         dic['area_total'] = round(float(area[0]) * 10000, 2)
+    # 单价
+    if dic['deal_price'] and dic['area_total']:
+        dic['land_transaction_price'] = float(dic['deal_price'] / dic['area_total'])
     # 批准单位
     approve_authority = table.xpath('./tr[16]/td[2]/span/text()')
     if approve_authority:
