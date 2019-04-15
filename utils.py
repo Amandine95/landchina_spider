@@ -48,6 +48,20 @@ def get_end_day():
         return new_list
 
 
+def get_end_page(day):
+    """获取完后的页数"""
+    page_list = []
+    with open(u'log/page.log', 'r+') as f:
+        res = f.readlines()
+        for line in res:
+            if u'page_end--%s' % day in line:
+                t = line.split('--')[2].replace(u'\n', u'')
+                page_list.append(int(t))
+        new_list = list(set(page_list))
+        new_list.sort(key=page_list.index)
+        return new_list
+
+
 if __name__ == '__main__':
     st = u'2017年09月11日'
     print get_date_obj(st)

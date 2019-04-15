@@ -13,7 +13,8 @@ from land_utils.land_utils.esclient import get_es_client, is_new
 from requests.adapters import HTTPAdapter
 import time
 import ConfigParser
-from utils import get_end_day
+from utils import get_end_day, get_end_page
+import random
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -75,7 +76,7 @@ def parse_page(url, page, data, cookies):
         ul = html_div2.xpath('//table[@id="TAB_contentTable"]/tbody/tr[%d]/td[3]/a/@href' % i)[0]
         urls.append(ul)
     print u'第%d页' % page
-    yield urls  # 返回每一页url列表
+    return urls  # 返回每一页url列表
 
 
 cookie = get_cookies()  # 获取cookies
@@ -101,28 +102,31 @@ for day in set_day(sd, ed):
     logger.warning(u'day_start--%s' % day)
     para = get_data(link, day, cookie)
     pg = parse_day(link, para, cookie)
+    page_list = get_end_page(day)
     for page in range(1, pg + 1):  # 起始页截止页
-        pages_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
-        for page_urls in pages_urls:  # u 每一页的urls
-            urls = page_urls
-            for url in urls:
-                time.sleep(3)
-                u = pre_url + url
-                res = is_new(u, index_name, index_type)  # 判断是否已存入es
-                # 不存在es里
-                if not res:
-                    index = urls.index(url)
-                    try:
-                        print u'start-第%d条' % index
-                        dic, content = parse_detail(pre_url, url, bk, tk, cookie)
-                        es.index(index_name, index_type, dic, dic['id'])
-                        print u'end-第%d条' % index  # 成功
-                    except Exception as e:
-                        print e
-                        logger.warning(u'fail_url--%s' % u)  # 失败的url
-                        continue
-
-                else:
+        if page in page_list:
+            print u'%s--%d页已完成'
+            continue
+        page_urls = parse_page(link, page, para, cookie)  # 所有页的urls列表
+        urls = page_urls
+        for url in urls:
+            time.sleep(random.randint(5, 10))
+            u = pre_url + url
+            res = is_new(u, index_name, index_type)  # 判断是否已存入es
+            # 不存在es里
+            if not res:
+                index = urls.index(url)
+                try:
+                    print u'start-第%d条' % index
+                    dic, content = parse_detail(pre_url, url, bk, tk, cookie)
+                    es.index(index_name, index_type, dic, dic['id'])
+                    print u'end-第%d条' % index  # 成功
+                except Exception as e:
+                    print e
+                    logger.warning(u'fail_url--%s' % u)  # 失败的url
                     continue
-        logger.warning(u'page_end--%d' % page)
+
+            else:
+                continue
+        logger.warning(u'page_end--%s--%d' % (day, page))
     logger.warning(u'day_end--%s' % day)
